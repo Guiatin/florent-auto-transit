@@ -60,7 +60,8 @@ export const vehicles = [
     badge: "Fiable",
     discount: "Réduction 20%",
     price: "Sur devis",
-    image: "https://unsplash.com",
+    image:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Toyota_Land_Cruiser_Prado_150.jpg?width=1600",
     specs: ["5 portes", "7 places", "4x4"],
   },
   {

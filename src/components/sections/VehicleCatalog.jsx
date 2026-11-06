@@ -27,7 +27,9 @@ export default function VehicleCatalog() {
                 }}
               >
                 <span className={styles.badge}>{vehicle.badge}</span>
-                <Car className={styles.mediaIcon} strokeWidth={1} aria-hidden="true" />
+                {!vehicle.image && (
+                  <Car className={styles.mediaIcon} strokeWidth={1} aria-hidden="true" />
+                )}
               </div>
 
               <div className={styles.body}>
