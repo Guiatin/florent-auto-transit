@@ -1,0 +1,333 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100svh;
+  overflow: hidden;
+  padding: calc(var(--nav-height) + 72px) 0 96px;
+  background:
+    radial-gradient(1100px 560px at 80% 8%, rgba(212, 175, 55, 0.1), transparent 62%),
+    radial-gradient(900px 500px at 0% 100%, rgba(19, 42, 74, 0.55), transparent 70%),
+    linear-gradient(180deg, var(--navy-900), var(--navy-950));
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse at 50% 30%, #000 10%, transparent 72%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 10%, transparent 72%);
+  pointer-events: none;
+}
+
+.grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: 64px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.eyebrowLine {
+  width: 42px;
+  height: 1px;
+  flex: none;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+
+.title {
+  margin-top: 24px;
+  max-width: 15ch;
+  font-family: var(--font-display);
+  font-size: clamp(2.7rem, 5vw, 4.4rem);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.accent {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.lead {
+  margin-top: 26px;
+  max-width: 52ch;
+  font-size: 1.04rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.primary {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  color: var(--navy-950);
+  box-shadow: 0 14px 34px rgba(212, 175, 55, 0.24);
+}
+
+.primary svg {
+  width: 18px;
+  height: 18px;
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 44px rgba(212, 175, 55, 0.32);
+}
+
+.secondary {
+  border: 1px solid var(--border);
+  background: rgba(247, 243, 234, 0.03);
+  color: var(--warm-white);
+}
+
+.secondary:hover {
+  border-color: var(--gold-dim);
+  background: var(--gold-faint);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 54px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border);
+}
+
+.facts dt {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(212, 175, 55, 0.75);
+}
+
+.facts dd {
+  margin-top: 8px;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--warm-white);
+}
+
+.visual {
+  position: relative;
+}
+
+.visual::before {
+  content: "";
+  position: absolute;
+  top: -56px;
+  right: -48px;
+  width: 340px;
+  height: 340px;
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.vehicleCard {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: linear-gradient(160deg, rgba(19, 42, 74, 0.92), rgba(6, 15, 31, 0.97));
+  box-shadow:
+    0 40px 90px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(247, 243, 234, 0.05);
+  animation: float 8s ease-in-out infinite;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.badge {
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  color: var(--navy-950);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.corridorTag {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(212, 175, 55, 0.85);
+}
+
+.illustration {
+  margin: 16px -4px 4px;
+  border-radius: 16px;
+  background:
+    radial-gradient(ellipse at 50% 110%, rgba(212, 175, 55, 0.14), transparent 68%),
+    linear-gradient(180deg, rgba(10, 25, 47, 0.4), rgba(6, 15, 31, 0.75));
+  overflow: hidden;
+}
+
+.illustration svg {
+  width: 100%;
+  height: auto;
+}
+
+.cardBody {
+  padding: 8px 6px 4px;
+}
+
+.category {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.vehicleName {
+  margin-top: 6px;
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.specs li {
+  padding: 5px 11px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 999px;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cardFooter {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.priceLabel {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.price {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--gold);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 980px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+
+  .title {
+    max-width: 18ch;
+  }
+
+  .visual {
+    width: min(560px, 100%);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: calc(var(--nav-height) + 48px) 0 72px;
+  }
+
+  .facts {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .actions {
+    gap: 10px;
+  }
+
+  .primary,
+  .secondary {
+    flex: 1 1 100%;
+  }
+
+  .visual::before {
+    display: none;
+  }
+}
