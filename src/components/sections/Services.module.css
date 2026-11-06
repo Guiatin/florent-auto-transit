@@ -175,6 +175,13 @@
   .card:nth-child(3) {
     flex-direction: column;
     align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .card:nth-child(3) .cardTitle,
+  .card:nth-child(3) .cardText,
+  .card:nth-child(3) .points {
+    flex: initial;
   }
 
   .card:nth-child(3) .cardTitle {
@@ -183,6 +190,10 @@
 
   .card:nth-child(3) .cardText {
     margin-top: 10px;
+  }
+
+  .card:nth-child(3) .points {
+    margin-top: 18px;
   }
 }
 
