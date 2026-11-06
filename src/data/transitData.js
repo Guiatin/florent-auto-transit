@@ -9,8 +9,16 @@ export const companyInfo = {
   tagline:
     "Transit et acheminement de véhicules entre Ouagadougou et Lomé, avec un interlocuteur unique.",
   phones: [
-    { label: "Burkina Faso", display: "+226 XX XX XX XX", href: "tel:+226XXXXXXXX" },
-    { label: "Togo", display: "+228 XX XX XX XX", href: "tel:+228XXXXXXXX" },
+    {
+      label: "Burkina Faso · Ligne 1",
+      display: "+226 76 21 87 79",
+      href: "tel:+22676218779",
+    },
+    {
+      label: "Burkina Faso · Ligne 2",
+      display: "+226 52 09 78 00",
+      href: "tel:+22652097800",
+    },
   ],
 };
 
@@ -23,27 +31,22 @@ export const services = [
     points: ["Itinéraire maîtrisé", "Un seul interlocuteur", "Suivi de bout en bout"],
   },
   {
-    id: "douane",
-    title: "Dédouanement",
+    id: "importation",
+    title: "Importation",
     description:
-      "Constitution et suivi des dossiers douaniers pour un passage fluide aux frontières du corridor.",
-    points: ["Dossiers conformes", "Délais suivis", "Assistance aux frontières"],
+      "Recherche, contrôle et achat du véhicule à l'étranger, avec un dossier d'importation suivi et transparent.",
+    points: ["Véhicules vérifiés", "Dédouanement inclus", "Rapport transparent"],
   },
   {
-    id: "achat",
-    title: "Achat & vérification",
+    id: "equipement",
+    title: "Équipement & Entretien",
     description:
-      "Recherche, contrôle et sélection du véhicule avant expédition, selon votre budget et vos besoins.",
-    points: ["Véhicules vérifiés", "Rapport transparent", "Conseil personnalisé"],
-  },
-  {
-    id: "livraison",
-    title: "Livraison sécurisée",
-    description:
-      "Acheminement suivi jusqu'au point de remise convenu, avec confirmation à chaque étape.",
-    points: ["Points de remise flexibles", "Suivi régulier", "Réception documentée"],
+      "Préparation du véhicule avant livraison : équipements, contrôle mécanique et entretien de mise en route.",
+    points: ["Contrôle mécanique", "Équipements sur mesure", "Livraison prête à rouler"],
   },
 ];
+
+export const demoNotice = "Données de démonstration / Véhicule fictif";
 
 export const vehicles = [
   {
@@ -54,8 +57,10 @@ export const vehicles = [
     fuel: "Diesel",
     transmission: "Automatique",
     condition: "Occasion",
-    badge: "Exemple de Fiche",
+    badge: "Fiable",
+    discount: "Réduction 20%",
     price: "Sur devis",
+    image: "https://unsplash.com",
     specs: ["5 portes", "7 places", "4x4"],
   },
   {
@@ -66,8 +71,9 @@ export const vehicles = [
     fuel: "Diesel",
     transmission: "Manuelle",
     condition: "Occasion",
-    badge: "Exemple de Fiche",
+    badge: "Fiable",
     price: "Sur devis",
+    image: "",
     specs: ["Double cabine", "5 places", "4x4"],
   },
   {
@@ -78,8 +84,9 @@ export const vehicles = [
     fuel: "Essence",
     transmission: "Automatique",
     condition: "Occasion",
-    badge: "Exemple de Fiche",
+    badge: "Fiable",
     price: "Sur devis",
+    image: "",
     specs: ["5 portes", "5 places", "2WD"],
   },
 ];
