@@ -6,6 +6,7 @@ export const companyInfo = {
   corridorFrom: "Ouagadougou",
   corridorTo: "Lomé",
   base: "Chez Zarzar",
+  whatsapp: "22676218779",
   tagline:
     "Transit et acheminement de véhicules entre Ouagadougou et Lomé, avec un interlocuteur unique.",
   phones: [
